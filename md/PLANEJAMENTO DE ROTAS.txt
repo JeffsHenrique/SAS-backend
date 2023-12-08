@@ -1,0 +1,30 @@
+1º passo: Rotas gerais - criar um CRUD = Create, Read, Update, Delete
+2º passo: Rotas específicas - rota de BUSCA
+Soft delete = o registro fica no banco, mas o "read" tá false (sai da listagem, mas ele existe)
+
+- POST /admin/login
+
+-- PASSO 1 --
+
+- GET /admin/events (listar eventos)
+- GET /admin/events/:id (listar evento específico)
+- POST /admin/events (criar um evento)
+- PUT /admin/events/:id (alterar um evento)
+- DELETE /admin/events/:id (deletar um evento)
+
+- GET /admin/events/:id_event/groups
+- GET /admin/events/:id_event/groups/:id
+- POST /admin/events/:id_event/groups
+- PUT /admin/events/:id_event/groups/:id
+- DELETE /admin/events/:id_event/groups/:id
+
+- GET /admin/events/:id_event/groups/:id_group/people
+- GET /admin/events/:id_event/groups/:id_group/people/:id
+- POST /admin/events/:id_event/groups/:id_group/people
+- PUT /admin/events/:id_event/groups/:id_group/people/:id
+- DELETE /admin/events/:id_event/groups/:id_group/people/:id
+
+-- PASSO 2 --
+
+- GET /events/:id
+- GET /events/:id_event/person?cpf=123

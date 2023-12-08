@@ -1,0 +1,26 @@
+Cadastro:
+    - Eventos
+    - Grupos
+    - Pessoas
+
+Banco de dados relacional (PostgreeSQL)
+
+events
+    - id INT PK AUTO_INCREMENT (primary key) (INTeiro)
+    - status BOOLEAN default=false
+    - title STRING
+    - description STRING
+    - grouped BOOLEAN default=false
+
+eventGroups
+    - id INT PK AUTO_INCREMENT
+    - id_event INT (RELACIONADO a events.id)
+    - name STRING
+
+eventPeople
+    - id INT PK AUTO_INCREMENT
+    - id_event INT (RELACIONADO a events.id)
+    - id_group INT (RELACIONADO a eventGroups.id)
+    - name STRING
+    - cpf STRING
+    - matched STRING default=""
